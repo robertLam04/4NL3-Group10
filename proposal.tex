@@ -2,7 +2,7 @@
 \usepackage{graphicx} % Required for inserting images
 \usepackage[margin=1in]{geometry}
 
-\title{Project Proposal: Task Title}
+\title{Project Proposal: Can You Cook It?}
 \date{\today}
 
 \begin{document}
@@ -16,16 +16,19 @@
 \end{itemize}
 
 \section*{2. Overview}
-\textbf{Task Title:} \textit{Assessing Recipe Complexity}
 
-Provide a brief description of the task, including its significance and what makes it challenging. Discuss why the task is relevant and how it contributes to the field.
+The goal of this project is to create an NLP model that can assess the difficulty of a recipe based on its description. By evaluating factors like the number of ingredients, the complexity of the steps, and the required appliances, the system will provide a difficulty rating that can help users determine whether a recipe is suitable for their skill level. This system can benefit both novice and experienced cooks, helping them choose recipes that align with their capabilities, saving time and reducing frustration. In turn, it encourages people to try cooking more often, build their culinary skills, and feel more confident in the kitchen.\\
+
+The significance of this task is rooted in the common practice of recipe authors advertising their dishes as "easy" or "simple" to attract a broad audience. While these labels are meant to appeal to beginner cooks, they often lead to frustration when the recipe turns out to be more complex than expected. Novice home cooks may attempt these "easy" recipes only to find they require more skill, time, or multitasking than anticipated. This misrepresentation can discourage people from cooking altogether. If there were a straightforward way to assess the true difficulty of a recipe before trying it, beginners and expert home cooks could better identify recipes that match their skill level, or present a challenge, encouraging them to gain confidence and skill in the kitchen.\\
+
+This NLP project is challenging because it requires assessing a variety of overlapping factors, including ingredient count, step complexity, appliance use, margin of error, and multitasking, all of which contribute differently to a recipe's difficulty. On top of this, recipes are written in diverse ways, with some condensing many steps into one, while others break down even the simplest tasks into multiple steps. These inconsistencies in how recipes are structured can make it difficult to standardize difficulty assessments. Additionally, the varying importance of these factors, depending on the recipe, further complicates the task of accurately determining a recipe's true difficulty.
 
 \section*{3. Task Definition}
 \begin{itemize}
-    \item \textbf{Type of Data:} Describe the type of data being used.
-    \item \textbf{Task Type:} Classification or regression.
-    \item \textbf{Number of Classes:} Specify the number of classes.
-    \item \textbf{Single-label or Multi-label:} Specify whether the task involves single-label or multi-label classification.
+    \item \textbf{Type of Data:} We will be using the following dataset from kaggle.com:
+    https://www.kaggle.com/datasets/thedevastator/better-recipes-for-a-better-life
+    It contains around 1000 online recipes written by various authors. We will provide annotators with the URL to the online recipe, allowing them to review the full content.
+    \item \textbf{Task Type:} Regression on a continuous scale of 1-5
 \end{itemize}
 
 \section*{4. Data Sources and Plan for Data Collection}
